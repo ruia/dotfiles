@@ -16,3 +16,9 @@
 > 
 > Usage:  
 > 1 - Copy file to user directory
+
+### 3 - .zshrc 
+> ZSH config file  
+> 
+> Usage:  
+> 1 - Copy file to user directory
