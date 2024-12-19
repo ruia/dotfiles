@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = {
   window_background_opacity = 0.9,
-  initial_cols = 100,
+  initial_cols = 120,
 
   hide_tab_bar_if_only_one_tab = true,
   -- integrated_title_buttons_style = "Gnome"
