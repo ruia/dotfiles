@@ -1,0 +1,10 @@
+[user]
+	name = Rui Almeida
+	email = rui.almeida011@gmail.com
+	signingkey = /home/ruia/.ssh/id_rsa.pub
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[init]
+	defaultBranch = main
