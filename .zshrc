@@ -105,6 +105,13 @@ source $ZSH/oh-my-zsh.sh
 alias gs="git status"
 alias gc="git commit"
 
+[[ -n "$WT_SESSION" ]] && {
+  chpwd() {
+    echo -en '\e]9;9;"'
+    wslpath -w "$PWD" | tr -d '\n'
+    echo -en '"\x07'
+  }
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
