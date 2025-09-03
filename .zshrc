@@ -151,5 +151,8 @@ eval "$(pyenv init -)"
 
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# Add composer bin folder to path
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
 # Created by `pipx` on 2025-02-14 09:43:55
 export PATH="$PATH:$HOME/.local/bin"

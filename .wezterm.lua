@@ -6,7 +6,12 @@ local config = {
 
   hide_tab_bar_if_only_one_tab = true,
   -- integrated_title_buttons_style = "Gnome"
-  font = wezterm.font('Source Code Pro'),
+  font = wezterm.font_with_fallback({
+    'SauceCode Pro Nerd Font',
+    'Source Code Pro',
+    'JetBrainsMono Nerd Font',
+    'Hack Nerd Font Mono',
+  }),
   font_size = 11
 }
 
