@@ -121,3 +121,7 @@ if ! shopt -oq posix; then
   fi
 fi
 . "$HOME/.cargo/env"
+
+export PHPVM_DIR="/home/ruial/.phpvm"
+export PATH="$PHPVM_DIR/bin:$PATH"
+[ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"

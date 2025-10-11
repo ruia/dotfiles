@@ -104,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="git status"
 alias gc="git commit"
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias changephp="sudo update-alternatives --config php"
 
 [[ -n "$WT_SESSION" ]] && {
   chpwd() {
@@ -157,3 +159,9 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 # Created by `pipx` on 2025-02-14 09:43:55
 export PATH="$PATH:$HOME/.local/bin"
+
+export PHPVM_DIR="$HOME/.phpvm"
+export PATH="$PHPVM_DIR/bin:$PATH"
+[ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
+
+export XDEBUG_MODE=coverage
