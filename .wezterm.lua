@@ -4,7 +4,7 @@ return {
   window_background_opacity = 0.8,
   initial_cols = 120,
   hide_tab_bar_if_only_one_tab = true,
-  adjust_window_size_when_changint_font_size = false,
+  adjust_window_size_when_changing_font_size = false,
 
   font = wezterm.font_with_fallback({
     'SauceCode Pro Nerd Font',
