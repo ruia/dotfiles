@@ -148,20 +148,24 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$PATH
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 # Add composer bin folder to path
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-# Created by `pipx` on 2025-02-14 09:43:55
-export PATH="$PATH:$HOME/.local/bin"
-
 export PHPVM_DIR="$HOME/.phpvm"
 export PATH="$PHPVM_DIR/bin:$PATH"
 [ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
 
 export XDEBUG_MODE=coverage
+export ANDROID_HOME=$HOME/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+export PNPM_HOME="/home/ruial/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+
+# opencode
+export PATH=/home/ruial/.opencode/bin:$PATH

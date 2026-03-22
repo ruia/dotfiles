@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 
 return {
-  window_background_opacity = 0.9,
+  window_background_opacity = 0.8,
   initial_cols = 120,
   hide_tab_bar_if_only_one_tab = true,
   adjust_window_size_when_changint_font_size = false,
@@ -12,7 +12,7 @@ return {
     'JetBrainsMono Nerd Font',
     'Hack Nerd Font Mono',
   }),
-  font_size = 11,
+  font_size = 10,
 
   keys = {
     {

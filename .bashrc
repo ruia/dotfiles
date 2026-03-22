@@ -125,3 +125,14 @@ fi
 export PHPVM_DIR="/home/ruial/.phpvm"
 export PATH="$PHPVM_DIR/bin:$PATH"
 [ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
+
+# opencode
+export PATH=/home/ruial/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/ruial/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
